@@ -80,6 +80,7 @@ public class FakeDependencyInjection {
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create(getGson()))
                     .build();
+            BookDisplayService retro = retrofit.create(BookDisplayService.class);
         }
         return retrofit;
     }
